@@ -55,7 +55,10 @@ app.get("/pokemon/:id/edit", (req, res) => {
 
 // SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
-    res.render("pokemon/show.ejs", { poke: pokemon[req.params.id] })
+    res.render("pokemon/show.ejs", { 
+        poke: pokemon[req.params.id],
+        index: req.params.id
+    })
 })
 
 /********************************* */

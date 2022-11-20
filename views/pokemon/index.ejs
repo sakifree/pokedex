@@ -5,8 +5,8 @@
     <%- include ("../partials/header.ejs") %>
     <main>
         <div>
-            <% for (poke of pokemon) { %>
-                <a href="/pokemon/<%= poke.id %>"><img src="<%= poke.img %>" alt="<%= poke.name %>"></a>
+            <% for (let i=0; i < pokemon.length; i++) { %>
+                <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>"></a>
             <% }%>    
         </div>
     </main>
