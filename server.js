@@ -24,18 +24,39 @@ app.get("/", (req, res) => {
 })
 
 // INDEX ROUTE
+app.get("/pokemon", (req, res) => {
+
+})
 
 // NEW ROUTE
+app.get("/pokemon/new", (req, res) => {
+
+})
 
 // DELETE ROUTE
+app.delete("/pokemon/:id", (req, res) => {
+
+})
 
 // UPDATE ROUTE
+app.put("/pokemon/:id", (req, res) => {
+
+})
 
 // CREATE ROUTE
+app.post("/pokemon", (req, res) => {
+
+})
 
 // EDIT ROUTE
+app.get("/pokemon/:id/edit", (req, res) => {
+    
+})
 
 // SHOW ROUTE
+app.get("/pokemon/:id", (req, res) => {
+
+})
 
 /********************************* */
 // SERVER LISTENER
