@@ -18,9 +18,24 @@ app.use(express.static("public"))
 /********************************* */
 // ROUTES
 /********************************* */
+// HOME ROUTE
 app.get("/", (req, res) => {
     res.send("This server is doing what it needs to do!")
 })
+
+// INDEX ROUTE
+
+// NEW ROUTE
+
+// DELETE ROUTE
+
+// UPDATE ROUTE
+
+// CREATE ROUTE
+
+// EDIT ROUTE
+
+// SHOW ROUTE
 
 /********************************* */
 // SERVER LISTENER
