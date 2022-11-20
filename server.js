@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 // INDEX ROUTE
 app.get("/pokemon", (req, res) => {
-
+    res.render("pokemon/index.ejs", { pokemon }) 
 })
 
 // NEW ROUTE
@@ -50,12 +50,12 @@ app.post("/pokemon", (req, res) => {
 
 // EDIT ROUTE
 app.get("/pokemon/:id/edit", (req, res) => {
-    
+
 })
 
 // SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
-
+    res.render("pokemon/show.ejs", { poke: pokemon[req.params.id] })
 })
 
 /********************************* */
