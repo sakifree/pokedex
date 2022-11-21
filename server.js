@@ -13,6 +13,7 @@ const pokemon = require("./models/pokemon")
 /********************************* */
 app.use(morgan("dev"))
 app.use(express.urlencoded({ extended:true }))
+app.use(methodOverride("_method"))
 app.use(express.static("public"))
 
 /********************************* */
@@ -35,7 +36,8 @@ app.get("/pokemon/new", (req, res) => {
 
 // DELETE ROUTE
 app.delete("/pokemon/:id", (req, res) => {
-
+    pokemon.splice(req.params.id, 1)
+    res.redirect("/pokemon")
 })
 
 // UPDATE ROUTE

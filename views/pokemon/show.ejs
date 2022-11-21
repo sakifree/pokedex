@@ -15,5 +15,10 @@
         HP: <%= poke.stats.hp %> <br>
         Attack: <%= poke.stats.attack %> <br>
         Defense: <%= poke.stats.defense %> <br>
+    
+    <form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE">
+    </form>
+    <a href="/pokemon/<%= index %>/edit"><button>EDIT</button></a> 
 </body>
 </html>
