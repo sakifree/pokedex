@@ -42,7 +42,8 @@ app.delete("/pokemon/:id", (req, res) => {
 
 // UPDATE ROUTE
 app.put("/pokemon/:id", (req, res) => {
-
+    pokemon[req.params.id] = req.body
+    res.redirect("/pokemon")
 })
 
 // CREATE ROUTE
@@ -53,7 +54,10 @@ app.post("/pokemon", (req, res) => {
 
 // EDIT ROUTE
 app.get("/pokemon/:id/edit", (req, res) => {
-
+    res.render("pokemon/edit.ejs", {
+        poke: pokemon[req.params.id],
+        index: req.params.id
+    })
 })
 
 // SHOW ROUTE

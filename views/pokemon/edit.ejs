@@ -3,5 +3,19 @@
     <%- include ("../partials/head.ejs") %>
 <body>
     <%- include ("../partials/header.ejs") %>
+    <main>
+        <div>
+            <h1>Update <%= poke.name %></h1>
+
+            <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+                Name: <input type="text" name="name" value="<%= poke.name %>"><br>
+                Type: <input type="text" name="type[0]" value="<%= poke.type[0] %>"><input type="text" name="type[1]" value="<%= poke.type[1] %>"><br>
+                HP: <input type="text" name="stats[hp]" value="<%= poke.stats.hp %>"><br>
+                Attack: <input type="text" name="stats[attack]" value="<%= poke.stats.attack %>"><br>
+                Denfense: <input type="text" name="stats[defense]" value="<%= poke.stats.defense %>"><br>
+                <input type="submit" value="Update Pokemon">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
