@@ -30,7 +30,7 @@ app.get("/pokemon", (req, res) => {
 
 // NEW ROUTE
 app.get("/pokemon/new", (req, res) => {
-
+    res.render("pokemon/new.ejs")
 })
 
 // DELETE ROUTE
@@ -45,7 +45,8 @@ app.put("/pokemon/:id", (req, res) => {
 
 // CREATE ROUTE
 app.post("/pokemon", (req, res) => {
-
+    pokemon.unshift(req.body)
+    res.redirect("/pokemon")
 })
 
 // EDIT ROUTE
