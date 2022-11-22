@@ -1,4 +1,23 @@
-img {
-    width: 335px;
-    height: 360px
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    background-color: lightcoral;
+}
+
+.navbar ul {
+    width: 50%;
+    display: flex;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 10px 30px;
+
 }
