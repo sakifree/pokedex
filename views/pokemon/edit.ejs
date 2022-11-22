@@ -5,7 +5,7 @@
     <%- include ("../partials/header.ejs") %>
     <main>
         <div>
-            <h1>Update <%= poke.name %></h1>
+            <h1>UPDATE <%= poke.name %></h1>
 
             <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
                 Name: <input type="text" name="name" value="<%= poke.name %>"><br>

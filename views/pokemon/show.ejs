@@ -3,7 +3,6 @@
     <%- include ("../partials/head.ejs") %>
 <body>
     <%- include ("../partials/header.ejs") %>
-    <a href="/pokemon"><button>Return to Index</button></a>
     <h1><%= poke.name  %></h1>
     <h1><img src="<%= poke.img  %>" alt="<%= poke.name  %>"></h1>
     Type: <% for (let i=0; i < poke.type.length; i++) { %>
@@ -15,10 +14,12 @@
         HP: <%= poke.stats.hp %> <br>
         Attack: <%= poke.stats.attack %> <br>
         Defense: <%= poke.stats.defense %> <br>
-    
+
+    <div id="edit-delete">
     <form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE">
     </form>
     <a href="/pokemon/<%= index %>/edit"><button>EDIT</button></a> 
+    </div>
 </body>
 </html>
